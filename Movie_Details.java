@@ -3,11 +3,10 @@ package in.co.capgemini;
 public class Movie_Details {
 	
 	
-
 	private String mov_Name, lead_Actor, lead_Actress, genre;
 	
 	
-
+	//Parameterised Constructor
 	public Movie_Details(String mov_Name, String lead_Actor, String lead_Actress, String genre) {
 		super();
 		this.mov_Name = mov_Name;
@@ -16,7 +15,7 @@ public class Movie_Details {
 		this.genre = genre;
 	}
 
-
+	//Getters and Setters
 	public void setMov_Name(String mov_Name) {
 		this.mov_Name = mov_Name;
 	}
