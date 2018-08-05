@@ -1,11 +1,14 @@
 package in.co.capgemini;
 
 public class SavingAccount implements Comparable<SavingAccount>{
+	
+	//Instance Variables
 	private double acc_balance;
 	private int acc_id;
 	private String accountHolderName;
 	private boolean isSalaryAccount;
 	
+	//Parameterised Constructor
 	public SavingAccount(double acc_balance, int acc_id, String accountHolderName, boolean isSalaryAccount) {
 		super();
 		this.acc_balance = acc_balance;
@@ -14,6 +17,7 @@ public class SavingAccount implements Comparable<SavingAccount>{
 		this.isSalaryAccount = isSalaryAccount;
 	}
 	
+	//Getters and Setters
 	public double getAcc_balance() {
 		return acc_balance;
 	}
@@ -34,7 +38,7 @@ public class SavingAccount implements Comparable<SavingAccount>{
 	}
 	
 	
-	
+	//Method Withdraw
 	public void withdraw(double withdraw) {
 		
 		if(isSalaryAccount == true) {
@@ -49,7 +53,7 @@ public class SavingAccount implements Comparable<SavingAccount>{
 		
 	}
 	
-	
+	//Method deposit
 	public void deposit(double deposit) {
 		
 		this.acc_balance += deposit;
@@ -62,6 +66,7 @@ public class SavingAccount implements Comparable<SavingAccount>{
 				+ getAccountHolderName()  + "]";
 	}
 
+	//Comparing then sorting
 	@Override
 	public int compareTo(SavingAccount sa) {
 		
